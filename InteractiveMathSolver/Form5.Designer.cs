@@ -1,7 +1,20 @@
-﻿namespace InteractiveMathSolver
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace InteractiveMathSolver
 {
     partial class Form5
     {
+        private Label lblResult;
+        private Label lblLcmResult;
+        private Button BackButton;
+        private Button btnSolveQuadratic;
+        private TextBox CoefficientInputa;
+        private Label lblGcdResult;
+        private Label Title;
+        private TextBox CoefficientInputb;
+        private TextBox CoefficientInputc;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,124 +41,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblResult = new Label();
-            lblLcmResult = new Label();
-            button2 = new Button();
-            btnSolveQuadratic = new Button();
-            txtA = new TextBox();
-            lblGcdResult = new Label();
-            label1 = new Label();
-            txtB = new TextBox();
-            txtC = new TextBox();
-            SuspendLayout();
-            // 
-            // lblResult
-            // 
-            lblResult.AutoSize = true;
-            lblResult.BorderStyle = BorderStyle.FixedSingle;
-            lblResult.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblResult.Location = new Point(19, 389);
-            lblResult.Name = "lblResult";
-            lblResult.Size = new Size(2, 33);
-            lblResult.TabIndex = 25;
-            // 
-            // lblLcmResult
-            // 
-            lblLcmResult.AutoSize = true;
-            lblLcmResult.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLcmResult.Location = new Point(-22, 334);
-            lblLcmResult.Name = "lblLcmResult";
-            lblLcmResult.Size = new Size(0, 22);
-            lblLcmResult.TabIndex = 24;
-            lblLcmResult.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(37, 19);
-            button2.Name = "button2";
-            button2.Size = new Size(52, 33);
-            button2.TabIndex = 23;
-            button2.Text = "\r\n";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // btnSolveQuadratic
-            // 
-            btnSolveQuadratic.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSolveQuadratic.Location = new Point(19, 245);
-            btnSolveQuadratic.Name = "btnSolveQuadratic";
-            btnSolveQuadratic.Size = new Size(442, 54);
-            btnSolveQuadratic.TabIndex = 22;
-            btnSolveQuadratic.Text = "Calculate";
-            btnSolveQuadratic.UseVisualStyleBackColor = true;
+            lblResult = new Label
+            {
+                AutoSize = true,
+                BorderStyle = BorderStyle.FixedSingle,
+                Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point),
+                Location = new Point(19, 389),
+                Name = "lblResult",
+                Size = new Size(2, 33),
+                TabIndex = 25
+            };
+
+            lblLcmResult = new Label
+            {
+                AutoSize = true,
+                Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point),
+                Location = new Point(-22, 334),
+                Name = "lblLcmResult",
+                Size = new Size(0, 22),
+                TabIndex = 24,
+                TextAlign = ContentAlignment.MiddleLeft
+            };
+
+            BackButton = new Button
+            {
+                BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo,
+                BackgroundImageLayout = ImageLayout.Stretch,
+                Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point),
+                Location = new Point(37, 19),
+                Name = "button2",
+                Size = new Size(52, 33),
+                TabIndex = 23,
+                Text = "\r\n",
+                UseVisualStyleBackColor = true
+            };
+            BackButton.Click += button2_Click;
+
+            btnSolveQuadratic = new Button
+            {
+                Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point),
+                Location = new Point(19, 245),
+                Name = "btnSolveQuadratic",
+                Size = new Size(442, 54),
+                TabIndex = 22,
+                Text = "Calculate",
+                UseVisualStyleBackColor = true
+            };
             btnSolveQuadratic.Click += btnSolveQuadratic_Click;
-            // 
-            // txtA
-            // 
-            txtA.Location = new Point(19, 76);
-            txtA.Multiline = true;
-            txtA.Name = "txtA";
-            txtA.PlaceholderText = "Enter Coeffiecient of a";
-            txtA.Size = new Size(442, 39);
-            txtA.TabIndex = 21;
-            // 
-            // lblGcdResult
-            // 
-            lblGcdResult.AutoSize = true;
-            lblGcdResult.BorderStyle = BorderStyle.FixedSingle;
-            lblGcdResult.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGcdResult.Location = new Point(-44, 457);
-            lblGcdResult.Name = "lblGcdResult";
-            lblGcdResult.Size = new Size(2, 33);
-            lblGcdResult.TabIndex = 20;
-            lblGcdResult.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Britannic Bold", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(132, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(283, 19);
-            label1.TabIndex = 19;
-            label1.Text = "Solve Quadratic Equations Coefficients";
-            // 
-            // txtB
-            // 
-            txtB.Location = new Point(19, 121);
-            txtB.Multiline = true;
-            txtB.Name = "txtB";
-            txtB.PlaceholderText = "Enter Coeffiecient of b";
-            txtB.Size = new Size(442, 39);
-            txtB.TabIndex = 26;
-            // 
-            // txtC
-            // 
-            txtC.Location = new Point(19, 166);
-            txtC.Multiline = true;
-            txtC.Name = "txtC";
-            txtC.PlaceholderText = "Enter Coeffiecient of c";
-            txtC.Size = new Size(442, 39);
-            txtC.TabIndex = 27;
-            // 
-            // Form5
-            // 
+
+            CoefficientInputa = new TextBox
+            {
+                Location = new Point(19, 76),
+                Multiline = true,
+                Name = "txtA",
+                PlaceholderText = "Enter Coefficient of a",
+                Size = new Size(442, 39),
+                TabIndex = 21
+            };
+
+            lblGcdResult = new Label
+            {
+                AutoSize = true,
+                BorderStyle = BorderStyle.FixedSingle,
+                Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point),
+                Location = new Point(-44, 457),
+                Name = "lblGcdResult",
+                Size = new Size(2, 33),
+                TabIndex = 20,
+                TextAlign = ContentAlignment.MiddleLeft
+            };
+
+            Title = new Label
+            {
+                AutoSize = true,
+                BorderStyle = BorderStyle.FixedSingle,
+                Font = new Font("Britannic Bold", 8F, FontStyle.Regular, GraphicsUnit.Point),
+                Location = new Point(132, 26),
+                Name = "label1",
+                Size = new Size(283, 19),
+                TabIndex = 19,
+                Text = "Solve Quadratic Equations Coefficients"
+            };
+
+            CoefficientInputb = new TextBox
+            {
+                Location = new Point(19, 121),
+                Multiline = true,
+                Name = "txtB",
+                PlaceholderText = "Enter Coefficient of b",
+                Size = new Size(442, 39),
+                TabIndex = 26
+            };
+
+            CoefficientInputc = new TextBox
+            {
+                Location = new Point(19, 166),
+                Multiline = true,
+                Name = "txtC",
+                PlaceholderText = "Enter Coefficient of c",
+                Size = new Size(442, 39),
+                TabIndex = 27
+            };
+
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(486, 644);
-            Controls.Add(txtC);
-            Controls.Add(txtB);
+            Controls.Add(CoefficientInputc);
+            Controls.Add(CoefficientInputb);
             Controls.Add(lblResult);
             Controls.Add(lblLcmResult);
-            Controls.Add(button2);
+            Controls.Add(BackButton);
             Controls.Add(btnSolveQuadratic);
-            Controls.Add(txtA);
+            Controls.Add(CoefficientInputa);
             Controls.Add(lblGcdResult);
-            Controls.Add(label1);
+            Controls.Add(Title);
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form5";
@@ -154,15 +163,5 @@
         }
 
         #endregion
-
-        private Label lblResult;
-        private Label lblLcmResult;
-        private Button button2;
-        private Button btnSolveQuadratic;
-        private TextBox txtA;
-        private Label lblGcdResult;
-        private Label label1;
-        private TextBox txtB;
-        private TextBox txtC;
     }
 }

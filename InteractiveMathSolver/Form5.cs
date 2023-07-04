@@ -44,9 +44,9 @@ namespace InteractiveMathSolver
         {
             try
             { 
-                double a = double.Parse(txtA.Text);
-                double b = double.Parse(txtB.Text);
-                double c = double.Parse(txtC.Text);
+                double a = double.Parse(CoefficientInputa.Text);
+                double b = double.Parse(CoefficientInputb.Text);
+                double c = double.Parse(CoefficientInputc.Text);
 
             
                 (double x1, double x2) = SolveQuadraticEquation(a, b, c);

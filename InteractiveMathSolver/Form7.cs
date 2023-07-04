@@ -33,12 +33,12 @@ namespace InteractiveMathSolver
         {
             try
             {
-                int a11 = int.Parse(txtA11.Text);
-                int a12 = int.Parse(txtA12.Text);
-                int a21 = int.Parse(txtA21.Text);
-                int a22 = int.Parse(txtA22.Text);
-                int b1 = int.Parse(txtB1.Text);
-                int b2 = int.Parse(txtB2.Text);
+                int a11 = int.Parse(CoefficientInputOf1.Text);
+                int a12 = int.Parse(CoefficientInputOf2.Text);
+                int a21 = int.Parse(CoefficientInputOf3.Text);
+                int a22 = int.Parse(CoefficientInputOf4.Text);
+                int b1 = int.Parse(CoefficientInputOf5.Text);
+                int b2 = int.Parse(CoefficientInputOf6.Text);
 
                 double[] results = SolveLinearEquations(a11, a12, a21, a22, b1, b2);
                 if (results.Length == 2)

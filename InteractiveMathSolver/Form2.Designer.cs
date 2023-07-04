@@ -1,4 +1,7 @@
-﻿namespace InteractiveMathSolver
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+namespace InteractiveMathSolver
 {
     partial class Form2
     {
@@ -28,24 +31,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            Title = new Label();
             lblGcdResult = new Label();
             txtGcdInput = new TextBox();
             btnGcd = new Button();
-            button2 = new Button();
+            BackButton = new Button();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(79, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(387, 33);
-            label1.TabIndex = 1;
-            label1.Text = "Find GCD of Multiple Numbers";
-            label1.Click += label1_Click;
+            Title.AutoSize = true;
+            Title.BorderStyle = BorderStyle.FixedSingle;
+            Title.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.Location = new Point(79, 24);
+            Title.Name = "label1";
+            Title.Size = new Size(387, 33);
+            Title.TabIndex = 1;
+            Title.Text = "Find GCD of Multiple Numbers";
+            Title.Click += label1_Click;
             // 
             // lblGcdResult
             // 
@@ -82,27 +85,27 @@
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(26, 24);
-            button2.Name = "button2";
-            button2.Size = new Size(52, 33);
-            button2.TabIndex = 5;
-            button2.Text = "\r\n";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            BackButton.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
+            BackButton.BackgroundImageLayout = ImageLayout.Stretch;
+            BackButton.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.Location = new Point(26, 24);
+            BackButton.Name = "button2";
+            BackButton.Size = new Size(52, 33);
+            BackButton.TabIndex = 5;
+            BackButton.Text = "\r\n";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += button2_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(494, 620);
-            Controls.Add(button2);
+            Controls.Add(BackButton);
             Controls.Add(btnGcd);
             Controls.Add(txtGcdInput);
             Controls.Add(lblGcdResult);
-            Controls.Add(label1);
+            Controls.Add(Title);
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Find GCD of multiple numbers";
@@ -112,10 +115,10 @@
 
         #endregion
 
-        private Label label1;
+        private Label Title;
         private Label lblGcdResult;
         private TextBox txtGcdInput;
         private Button btnGcd;
-        private Button button2;
+        private Button BackButton;
     }
 }

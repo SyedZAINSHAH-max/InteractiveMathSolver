@@ -1,16 +1,19 @@
-﻿namespace InteractiveMathSolver
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace InteractiveMathSolver
 {
     partial class Form4
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Label lblLcmResult;
+        private Button BackButton;
+        private Button btnSolveLinear;
+        private TextBox txtLinearInput;
+        private Label lblGcdResult;
+        private Label Title;
+        private Label lblLinearResult;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,23 +25,17 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             lblLcmResult = new Label();
-            button2 = new Button();
+            BackButton = new Button();
             btnSolveLinear = new Button();
             txtLinearInput = new TextBox();
             lblGcdResult = new Label();
-            label1 = new Label();
+            Title = new Label();
             lblLinearResult = new Label();
             SuspendLayout();
-            // 
-            // lblLcmResult
-            // 
+
             lblLcmResult.AutoSize = true;
             lblLcmResult.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblLcmResult.Location = new Point(-19, 337);
@@ -46,22 +43,18 @@
             lblLcmResult.Size = new Size(0, 22);
             lblLcmResult.TabIndex = 17;
             lblLcmResult.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(24, 20);
-            button2.Name = "button2";
-            button2.Size = new Size(52, 33);
-            button2.TabIndex = 16;
-            button2.Text = "\r\n";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // btnSolveLinear
-            // 
+
+            BackButton.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
+            BackButton.BackgroundImageLayout = ImageLayout.Stretch;
+            BackButton.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.Location = new Point(24, 20);
+            BackButton.Name = "button2";
+            BackButton.Size = new Size(52, 33);
+            BackButton.TabIndex = 16;
+            BackButton.Text = "\r\n";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += button2_Click;
+
             btnSolveLinear.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnSolveLinear.Location = new Point(22, 155);
             btnSolveLinear.Name = "btnSolveLinear";
@@ -70,18 +63,14 @@
             btnSolveLinear.Text = "Calculate";
             btnSolveLinear.UseVisualStyleBackColor = true;
             btnSolveLinear.Click += btnSolveLinear_Click;
-            // 
-            // txtLinearInput
-            // 
+
             txtLinearInput.Location = new Point(22, 79);
             txtLinearInput.Multiline = true;
             txtLinearInput.Name = "txtLinearInput";
-            txtLinearInput.PlaceholderText = "Add Linaear Equation in the form of ax + b = 0";
+            txtLinearInput.PlaceholderText = "Add Linear Equation in the form of ax + b = 0";
             txtLinearInput.Size = new Size(442, 39);
             txtLinearInput.TabIndex = 14;
-            // 
-            // lblGcdResult
-            // 
+
             lblGcdResult.AutoSize = true;
             lblGcdResult.BorderStyle = BorderStyle.FixedSingle;
             lblGcdResult.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -90,20 +79,16 @@
             lblGcdResult.Size = new Size(2, 33);
             lblGcdResult.TabIndex = 13;
             lblGcdResult.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Britannic Bold", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(94, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(349, 19);
-            label1.TabIndex = 12;
-            label1.Text = "Solve Linear Equations With Double Coefficients";
-            // 
-            // lblLinearResult
-            // 
+
+            Title.AutoSize = true;
+            Title.BorderStyle = BorderStyle.FixedSingle;
+            Title.Font = new Font("Britannic Bold", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.Location = new Point(94, 29);
+            Title.Name = "label1";
+            Title.Size = new Size(349, 19);
+            Title.TabIndex = 12;
+            Title.Text = "Solve Linear Equations With Double Coefficients";
+
             lblLinearResult.AutoSize = true;
             lblLinearResult.BorderStyle = BorderStyle.FixedSingle;
             lblLinearResult.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -111,19 +96,17 @@
             lblLinearResult.Name = "lblLinearResult";
             lblLinearResult.Size = new Size(2, 33);
             lblLinearResult.TabIndex = 18;
-            // 
-            // Form4
-            // 
+
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(486, 631);
             Controls.Add(lblLinearResult);
             Controls.Add(lblLcmResult);
-            Controls.Add(button2);
+            Controls.Add(BackButton);
             Controls.Add(btnSolveLinear);
             Controls.Add(txtLinearInput);
             Controls.Add(lblGcdResult);
-            Controls.Add(label1);
+            Controls.Add(Title);
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form4";
@@ -132,13 +115,5 @@
         }
 
         #endregion
-
-        private Label lblLcmResult;
-        private Button button2;
-        private Button btnSolveLinear;
-        private TextBox txtLinearInput;
-        private Label lblGcdResult;
-        private Label label1;
-        private Label lblLinearResult;
     }
 }

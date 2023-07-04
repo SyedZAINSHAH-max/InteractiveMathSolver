@@ -1,16 +1,18 @@
-﻿namespace InteractiveMathSolver
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace InteractiveMathSolver
 {
     partial class Form3
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Button Back;
+        private Button btnLcm;
+        private TextBox txtLcmInput;
+        private Label lblGcdResult;
+        private Label Title;
+        private Label lblLcmResult;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,35 +24,27 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
+            Back = new Button();
             btnLcm = new Button();
             txtLcmInput = new TextBox();
             lblGcdResult = new Label();
-            label1 = new Label();
+            Title = new Label();
             lblLcmResult = new Label();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(14, 41);
-            button2.Name = "button2";
-            button2.Size = new Size(52, 33);
-            button2.TabIndex = 10;
-            button2.Text = "\r\n";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // btnLcm
-            // 
+
+            Back.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
+            Back.BackgroundImageLayout = ImageLayout.Stretch;
+            Back.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Back.Location = new Point(14, 41);
+            Back.Name = "button2";
+            Back.Size = new Size(52, 33);
+            Back.TabIndex = 10;
+            Back.Text = "\r\n";
+            Back.UseVisualStyleBackColor = true;
+            Back.Click += button2_Click;
+
             btnLcm.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnLcm.Location = new Point(12, 176);
             btnLcm.Name = "btnLcm";
@@ -59,18 +53,14 @@
             btnLcm.Text = "Calculate";
             btnLcm.UseVisualStyleBackColor = true;
             btnLcm.Click += btnLcm_Click;
-            // 
-            // txtLcmInput
-            // 
+
             txtLcmInput.Location = new Point(12, 100);
             txtLcmInput.Multiline = true;
             txtLcmInput.Name = "txtLcmInput";
-            txtLcmInput.PlaceholderText = "Enter Numbers Seperated by Comma";
+            txtLcmInput.PlaceholderText = "Enter Numbers Separated by Comma";
             txtLcmInput.Size = new Size(442, 39);
             txtLcmInput.TabIndex = 8;
-            // 
-            // lblGcdResult
-            // 
+
             lblGcdResult.AutoSize = true;
             lblGcdResult.BorderStyle = BorderStyle.FixedSingle;
             lblGcdResult.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -79,20 +69,16 @@
             lblGcdResult.Size = new Size(2, 33);
             lblGcdResult.TabIndex = 7;
             lblGcdResult.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(67, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(387, 33);
-            label1.TabIndex = 6;
-            label1.Text = "Find LCM of multiple numbers";
-            // 
-            // lblLcmResult
-            // 
+
+            Title.AutoSize = true;
+            Title.BorderStyle = BorderStyle.FixedSingle;
+            Title.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.Location = new Point(67, 41);
+            Title.Name = "label1";
+            Title.Size = new Size(387, 33);
+            Title.TabIndex = 6;
+            Title.Text = "Find LCM of Multiple Numbers";
+
             lblLcmResult.AutoSize = true;
             lblLcmResult.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblLcmResult.Location = new Point(14, 280);
@@ -100,32 +86,23 @@
             lblLcmResult.Size = new Size(0, 22);
             lblLcmResult.TabIndex = 11;
             lblLcmResult.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // Form3
-            // 
+
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(476, 621);
             Controls.Add(lblLcmResult);
-            Controls.Add(button2);
+            Controls.Add(Back);
             Controls.Add(btnLcm);
             Controls.Add(txtLcmInput);
             Controls.Add(lblGcdResult);
-            Controls.Add(label1);
+            Controls.Add(Title);
             Name = "Form3";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form3";
+            Text = "LCM Form";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button2;
-        private Button btnLcm;
-        private TextBox txtLcmInput;
-        private Label lblGcdResult;
-        private Label label1;
-        private Label lblLcmResult;
     }
 }
