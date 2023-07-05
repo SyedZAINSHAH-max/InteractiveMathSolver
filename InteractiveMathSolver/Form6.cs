@@ -21,11 +21,11 @@ namespace InteractiveMathSolver
         private int[,] ParseMatrix(string input, int size)
         {
             int[,] matrix = new int[size, size];
-            string[] rows = input.Split('\n');
+            string[] rows = input.Split('-');
 
             for (int i = 0; i < size; i++)
             {
-                string[] values = rows[i].Split(' ');
+                string[] values = rows[i].Split(',');
                 for (int j = 0; j < size; j++)
                 {
                     matrix[i, j] = int.Parse(values[j]);
@@ -99,6 +99,21 @@ namespace InteractiveMathSolver
             {
                 MessageBox.Show("Enter the value in correct order");
             }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFindDeterminant_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

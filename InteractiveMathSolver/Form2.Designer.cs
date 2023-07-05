@@ -31,86 +31,104 @@ namespace InteractiveMathSolver
         /// </summary>
         private void InitializeComponent()
         {
-            Title = new Label();
-            lblGcdResult = new Label();
-            txtGcdInput = new TextBox();
-            btnGcd = new Button();
-            BackButton = new Button();
-            SuspendLayout();
+            this.Title = new System.Windows.Forms.Label();
+            this.lblGcdResult = new System.Windows.Forms.Label();
+            this.txtGcdInput = new System.Windows.Forms.TextBox();
+            this.btnGcd = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
-            // label1
+            // Title
             // 
-            Title.AutoSize = true;
-            Title.BorderStyle = BorderStyle.FixedSingle;
-            Title.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            Title.Location = new Point(79, 24);
-            Title.Name = "label1";
-            Title.Size = new Size(387, 33);
-            Title.TabIndex = 1;
-            Title.Text = "Find GCD of Multiple Numbers";
-            Title.Click += label1_Click;
+            this.Title.AutoSize = true;
+            this.Title.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Title.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.Location = new System.Drawing.Point(34, 36);
+            this.Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(261, 23);
+            this.Title.TabIndex = 1;
+            this.Title.Text = "Find GCD of Multiple Numbers";
             // 
             // lblGcdResult
             // 
-            lblGcdResult.AutoSize = true;
-            lblGcdResult.BorderStyle = BorderStyle.FixedSingle;
-            lblGcdResult.Font = new Font("Britannic Bold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGcdResult.Location = new Point(24, 258);
-            lblGcdResult.Name = "lblGcdResult";
-            lblGcdResult.Size = new Size(2, 33);
-            lblGcdResult.TabIndex = 2;
-            lblGcdResult.TextAlign = ContentAlignment.MiddleLeft;
-            lblGcdResult.Click += lblGcdResult_Click;
+            this.lblGcdResult.AutoSize = true;
+            this.lblGcdResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblGcdResult.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblGcdResult.Location = new System.Drawing.Point(17, 166);
+            this.lblGcdResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGcdResult.Name = "lblGcdResult";
+            this.lblGcdResult.Size = new System.Drawing.Size(2, 23);
+            this.lblGcdResult.TabIndex = 2;
+            this.lblGcdResult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtGcdInput
             // 
-            txtGcdInput.Location = new Point(24, 83);
-            txtGcdInput.Multiline = true;
-            txtGcdInput.Name = "txtGcdInput";
-            txtGcdInput.PlaceholderText = "Enter Numbers Seperated by Comma";
-            txtGcdInput.Size = new Size(442, 39);
-            txtGcdInput.TabIndex = 3;
-            txtGcdInput.TextChanged += txtGcdInput_TextChanged;
+            this.txtGcdInput.Location = new System.Drawing.Point(17, 77);
+            this.txtGcdInput.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGcdInput.Multiline = true;
+            this.txtGcdInput.Name = "txtGcdInput";
+            this.txtGcdInput.PlaceholderText = "Enter Numbers Seperated by Comma";
+            this.txtGcdInput.Size = new System.Drawing.Size(311, 25);
+            this.txtGcdInput.TabIndex = 3;
             // 
             // btnGcd
             // 
-            btnGcd.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGcd.Location = new Point(24, 159);
-            btnGcd.Name = "btnGcd";
-            btnGcd.Size = new Size(442, 54);
-            btnGcd.TabIndex = 4;
-            btnGcd.Text = "Calculate";
-            btnGcd.UseVisualStyleBackColor = true;
-            btnGcd.Click += btnGcd_Click;
+            this.btnGcd.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGcd.Location = new System.Drawing.Point(17, 118);
+            this.btnGcd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGcd.Name = "btnGcd";
+            this.btnGcd.Size = new System.Drawing.Size(309, 32);
+            this.btnGcd.TabIndex = 4;
+            this.btnGcd.Text = "Calculate";
+            this.btnGcd.UseVisualStyleBackColor = true;
+            this.btnGcd.Click += new System.EventHandler(this.btnGcd_Click);
             // 
-            // button2
+            // BackButton
             // 
-            BackButton.BackgroundImage = Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
-            BackButton.BackgroundImageLayout = ImageLayout.Stretch;
-            BackButton.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            BackButton.Location = new Point(26, 24);
-            BackButton.Name = "button2";
-            BackButton.Size = new Size(52, 33);
-            BackButton.TabIndex = 5;
-            BackButton.Text = "\r\n";
-            BackButton.UseVisualStyleBackColor = true;
-            BackButton.Click += button2_Click;
+            this.BackButton.BackgroundImage = global::InteractiveMathSolver.Properties.Resources.png_transparent_computer_icons_computer_software_information_jenzabar_microsoft_button_back_angle_text_logo;
+            this.BackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackButton.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BackButton.Location = new System.Drawing.Point(2, -1);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(36, 25);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "\r\n";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(13, 303);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(314, 23);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Enter numbers seperated by comma";
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(494, 620);
-            Controls.Add(BackButton);
-            Controls.Add(btnGcd);
-            Controls.Add(txtGcdInput);
-            Controls.Add(lblGcdResult);
-            Controls.Add(Title);
-            Name = "Form2";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Find GCD of multiple numbers";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(346, 372);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.btnGcd);
+            this.Controls.Add(this.txtGcdInput);
+            this.Controls.Add(this.lblGcdResult);
+            this.Controls.Add(this.Title);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Find GCD of multiple numbers";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -120,5 +138,6 @@ namespace InteractiveMathSolver
         private TextBox txtGcdInput;
         private Button btnGcd;
         private Button BackButton;
+        private Label label1;
     }
 }
